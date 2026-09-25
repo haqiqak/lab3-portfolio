@@ -78,6 +78,52 @@ ul {
     width: 150px;
 }
 
+/* ---------- quick facts (homepage) ---------- */
+/* four boxes, two per row, floated so they sit side by side */
+.quick-facts {
+    margin: 15px 0 25px 0;
+}
+
+.fact-box {
+    float: left;
+    width: 46%;
+    margin: 0 0 20px 0;
+    padding: 12px 15px;
+    background-color: #e6f4ea;
+    border-left: 4px solid #2e7d32;
+    box-sizing: border-box;
+    min-height: 90px;
+}
+
+/* same even/odd trick as the gallery: second column floats right,
+   and every odd box clears both so a new row starts cleanly */
+.fact-box:nth-child(even) {
+    float: right;
+}
+
+.fact-box:nth-child(odd) {
+    clear: both;
+}
+
+.fact-box h3 {
+    margin-top: 0;
+}
+
+.fact-box p {
+    margin-bottom: 0;
+    color: #555555;
+}
+
+/* ---------- pull-quote / highlight ---------- */
+.highlight {
+    margin: 20px 0;
+    padding: 14px 20px;
+    background-color: #f3f8f4;
+    border-left: 4px solid #a5d6a7;
+    font-style: italic;
+    color: #555555;
+}
+
 /* ---------- navigation menu ---------- */
 header {
     background-color: #2e7d32;
