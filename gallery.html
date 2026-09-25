@@ -1,61 +1,97 @@
 <!DOCTYPE html>
+<!-- Haqiq Azeem Khan | Student ID 519071 | Section BSDS2A | CS313 Web Engineering Lab 3 -->
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Haqiq Azeem Khan - Image Gallery</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery | Haqiq Azeem Khan</title>
+    <meta name="description" content="Six pictures arranged with float and clear.">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-    <nav class="clearfix">
-        <a href="index.html">Home</a>
-        <a href="hobbies.html">Hobbies</a>
-        <a href="skills.html">Personal Skills</a>
-        <a href="gallery.html" class="active">Image Gallery</a>
-        <a href="contact.html">Contact Me</a>
-    </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+    <div class="bar clearfix">
+        <p class="brand">Haqiq Azeem Khan<small>BS Data Science, NUST Islamabad</small></p>
+        <nav class="site-nav" aria-label="Main">
+            <a href="index.html">Home</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="skills.html">Skills</a>
+            <a class="active" href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<div class="container">
-    <h1>Image Gallery</h1>
-    <p>Places I'm connected to, and a few favourites.</p>
+<div class="wrap">
+    <div class="sheet">
 
-    <div class="gallery clearfix">
-        <figure>
-            <img src="images/photo1.jpg" alt="Central Mosque in Wah Cantt">
-            <figcaption>Wah Cantt, my hometown</figcaption>
-        </figure>
+        <h1 class="page-title">Image Gallery</h1>
+        <p class="lede">Six pictures: places I have been, and one logo.</p>
 
-        <figure>
-            <img src="images/photo2.jpg" alt="Aerial view of Cadet College Hasan Abdal">
-            <figcaption>Cadet College Hasan Abdal, my old school</figcaption>
-        </figure>
+        <main id="main">
+        <section>
+            <h2>Gallery</h2>
+            <p>
+                Each picture is inside a floated box, two per row. The odd boxes clear the row above
+                so a tall picture never leaves a gap in the layout.
+            </p>
 
-        <figure>
-            <img src="images/photo3.jpg" alt="A NUST campus building">
-            <figcaption>NUST, Islamabad, where I study now</figcaption>
-        </figure>
+            <div class="gallery">
+                <figure>
+                    <img src="images/photo1.jpg" alt="A wide view of the NUST campus in Islamabad">
+                    <figcaption><strong>NUST, Islamabad</strong>Where I study now</figcaption>
+                </figure>
 
-        <figure>
-            <img src="images/photo4.jpg" alt="Two men playing football">
-            <figcaption>Football</figcaption>
-        </figure>
+                <figure>
+                    <img src="images/photo2.jpg" alt="Faisal Mosque in Islamabad at midday">
+                    <figcaption><strong>Faisal Mosque</strong>Landmark I pass most days</figcaption>
+                </figure>
 
-        <figure>
-            <img src="images/photo5.jpg" alt="Karachi skyline">
-            <figcaption>Karachi, my favourite city</figcaption>
-        </figure>
+                <figure>
+                    <img src="images/photo3.jpg" alt="People on a beach at sunset in Karachi">
+                    <figcaption><strong>Karachi</strong>My favourite city</figcaption>
+                </figure>
 
-        <figure>
-            <img src="images/photo6.jpg" alt="Cover of the novel Klara and the Sun by Kazuo Ishiguro">
-            <figcaption>Klara and the Sun, my favourite book</figcaption>
-        </figure>
+                <figure>
+                    <img src="images/photo4.jpg" alt="Running track and blue seating at Jinnah Sports Stadium">
+                    <figcaption><strong>Jinnah Sports Stadium</strong>Where the hockey fixtures happen</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/photo5.jpg" alt="The white facade of the National Library of Pakistan">
+                    <figcaption><strong>National Library</strong>Where I end up on a free afternoon</figcaption>
+                </figure>
+
+                <figure>
+                    <img class="logo" src="images/photo6.jpg" alt="The Substack logo">
+                    <figcaption><strong>Substack</strong>Where most of my writing goes</figcaption>
+                </figure>
+            </div>
+            <div class="clear"></div>
+        </section>
+
+        <section>
+            <h2>About these pictures</h2>
+            <p>
+                Sources and licences are listed in the README that ships with the project. The Substack
+                mark is a logo rather than a photograph, so it is shown at its own size instead of
+                being stretched to fill the tile.
+            </p>
+        </section>
+        </main>
+
     </div>
 </div>
 
-<footer>
-    <p>Haqiq Azeem Khan - CS313 Web Engineering, Lab 3</p>
+<footer class="site-footer">
+    <div class="bar">
+        <p>Haqiq Azeem Khan &middot; Student ID 519071 &middot; Section BSDS2A</p>
+        <p>CS313 Web Engineering, Lab 3 &middot;
+           <a href="https://github.com/haqiqak">github.com/haqiqak</a></p>
+    </div>
 </footer>
 
 </body>

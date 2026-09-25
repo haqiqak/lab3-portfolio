@@ -1,58 +1,108 @@
 <!DOCTYPE html>
+<!-- Haqiq Azeem Khan | Student ID 519071 | Section BSDS2A | CS313 Web Engineering Lab 3 -->
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Haqiq Azeem Khan - Hobbies</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies | Haqiq Azeem Khan</title>
+    <meta name="description" content="Writing, reading, field hockey and game development.">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-    <nav class="clearfix">
-        <a href="index.html">Home</a>
-        <a href="hobbies.html" class="active">Hobbies</a>
-        <a href="skills.html">Personal Skills</a>
-        <a href="gallery.html">Image Gallery</a>
-        <a href="contact.html">Contact Me</a>
-    </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+    <div class="bar clearfix">
+        <p class="brand">Haqiq Azeem Khan<small>BS Data Science, NUST Islamabad</small></p>
+        <nav class="site-nav" aria-label="Main">
+            <a href="index.html">Home</a>
+            <a class="active" href="hobbies.html">Hobbies</a>
+            <a href="skills.html">Skills</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<div class="container">
-    <h1>Hobbies</h1>
+<div class="wrap">
+    <div class="sheet">
 
-    <div class="hobby clearfix">
-        <img class="float-left side-img" src="images/photo2.jpg"
-             alt="Aerial view of Cadet College Hasan Abdal">
-        <h3>Writing</h3>
-        <p>I write fiction in both Urdu and English, and have been doing it since 2019, starting with
-        short stories in Urdu when I was at Cadet College Hasan Abdal. I post most of it on my Substack,
-        <em>haqiq</em>. I also worked as a script writer for the NUST Drama Club and was part of its
-        Literary Society.</p>
-    </div>
+        <h1 class="page-title">Hobbies</h1>
+        <p class="lede">Four things that take up time that is not spent on coursework.</p>
 
-    <div class="hobby clearfix">
-        <img class="float-right side-img cover" src="images/photo6.jpg"
-             alt="Cover of the novel Klara and the Sun by Kazuo Ishiguro">
-        <h3>Reading</h3>
-        <p>I read a mix of fiction and non-fiction, and when I don't have time to sit and read I listen
-        to audiobooks instead, usually while walking around campus or during commutes.</p>
-    </div>
+        <main id="main">
+        <section>
+            <h2>Writing</h2>
+            <img class="float-right about-photo" src="images/photo2.jpg"
+                 alt="Faisal Mosque in Islamabad at midday">
+            <p>
+                I write short fiction in both Urdu and English, and have been doing it since 2019. It
+                started with Urdu short stories at Cadet College Hasan Abdal, and I still think Urdu is
+                the harder of the two to do properly.
+            </p>
+            <p>
+                Most of it ends up on my Substack. Writing for the NUST Drama Club was a different
+                kind of practice, since a script has to actually work when other people are reading it
+                out loud.
+            </p>
+            <div class="clear"></div>
+        </section>
 
-    <div class="hobby">
-        <h3>Field Hockey</h3>
-        <p>I play field hockey when I get the chance. It's less regular than my writing, but it's a good
-        way to take a break from screens and assignments.</p>
-    </div>
+        <section>
+            <h2>Reading</h2>
+            <img class="float-left about-photo" src="images/photo5.jpg"
+                 alt="The white facade of the National Library of Pakistan in Islamabad">
+            <p>
+                I read a mix of fiction and non-fiction, and I keep a list going that I never finish.
+                Fiction mostly, then whatever I can get hold of on data and machine learning, which
+                tends to be drier than I expect.
+            </p>
+            <p>
+                When I cannot sit down and read properly I put on an audiobook and walk, usually
+                somewhere on campus or on the way back from Wah.
+            </p>
+            <div class="clear"></div>
+        </section>
 
-    <div class="hobby">
-        <h3>Game Development</h3>
-        <p>For one of my university courses I built a small game in Unreal Engine, which got me
-        interested in the technical side of game design as well.</p>
+        <section>
+            <h2>Field hockey and football</h2>
+            <img class="float-right about-photo" src="images/photo4.jpg"
+                 alt="The running track and blue seating of Jinnah Sports Stadium">
+            <p>
+                Field hockey is the one I have played longest, mostly at college level. Football is
+                what I get pulled into more often, usually because someone is short of players.
+            </p>
+            <p>
+                Either way it is the best excuse I have for putting the laptop down for an afternoon.
+            </p>
+            <div class="clear"></div>
+        </section>
+
+        <section>
+            <h2>Game development</h2>
+            <p>
+                For one of my courses I built a small game in Unreal Engine. It was far more work than
+                I expected and it is not a game anyone would want to play, but it is the reason I
+                started looking at the technical side of game design rather than just writing design
+                documents nobody reads.
+            </p>
+            <p>
+                I am not sure what I am making next. Something small, probably, with a scope I can
+                actually finish this time.
+            </p>
+        </section>
+        </main>
+
     </div>
 </div>
 
-<footer>
-    <p>Haqiq Azeem Khan - CS313 Web Engineering, Lab 3</p>
+<footer class="site-footer">
+    <div class="bar">
+        <p>Haqiq Azeem Khan &middot; Student ID 519071 &middot; Section BSDS2A</p>
+        <p>CS313 Web Engineering, Lab 3 &middot;
+           <a href="https://github.com/haqiqak">github.com/haqiqak</a></p>
+    </div>
 </footer>
 
 </body>

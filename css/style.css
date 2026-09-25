@@ -1,236 +1,484 @@
-/* style.css - one stylesheet shared by every page of the portfolio */
+/*
+ * CS313 Web Engineering - Lab 3
+ * Haqiq Azeem Khan | Student ID 519071 | Section BSDS2A
+ * One stylesheet shared by every page. No JavaScript, no CSS framework.
+ */
 
-/* ---------- page basics ---------- */
-body {
-    font-family: system-ui, sans-serif;
-    margin: 0;
-    background-color: #f3f8f4;
-    color: #333333;
+:root {
+    --green: #2e7d32;
+    --green-dark: #1b5e20;
+    --green-tint: #eaf3ec;
+    --amber: #b3541e;
+    --ink: #23282d;
+    --muted: #5f6b72;
+    --bg: #f1f5f2;
+    --surface: #ffffff;
+    --border: #dbe4dd;
+    --radius: 8px;
+    --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-h1 {
-    color: #2e7d32;
-    margin-top: 0;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--ink);
+    background-color: var(--bg);
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------- header */
+
+.site-header {
+    background-color: var(--green);
+    color: #ffffff;
+}
+
+.bar {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* the name floats left and the menu floats right on the same row */
+.brand {
+    float: left;
+    padding: 16px 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.brand small {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: #cfe3d2;
+}
+
+.site-nav {
+    float: right;
+}
+
+.site-nav a {
+    float: left;
+    display: block;
+    padding: 22px 14px;
+    color: #e4f0e6;
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: background-color 0.12s ease, color 0.12s ease;
+}
+
+.site-nav a:hover {
+    background-color: var(--green-dark);
+    color: #ffffff;
+}
+
+.site-nav a.active {
+    background-color: var(--green-dark);
+    box-shadow: inset 0 -3px 0 #f0b429;
+}
+
+/* the floated brand and links would otherwise escape the green band */
+.bar::after,
+.site-nav::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ------------------------------------------------------------------ page */
+
+.wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 28px 20px 40px;
+}
+
+.sheet {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 34px;
+}
+
+.page-title {
+    font-size: 1.7rem;
+    line-height: 1.2;
+    margin: 0 0 4px;
+}
+
+.lede {
+    color: var(--muted);
+    margin: 0 0 8px;
+}
+
+section {
+    padding: 26px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+section:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+section:first-of-type {
+    padding-top: 20px;
 }
 
 h2 {
-    color: #434343;
-    border-bottom: 2px solid #e6f4ea;
-    padding-bottom: 4px;
+    font-size: 1.2rem;
+    color: var(--green);
+    margin: 0 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--green-tint);
 }
 
 h3 {
-    color: #2e7d32;
-    margin-bottom: 4px;
+    font-size: 1.02rem;
+    margin: 0 0 6px;
 }
 
-a {
-    color: #2e7d32;
+p {
+    margin: 0 0 14px;
 }
 
 ul {
-    line-height: 1.7;
+    margin: 0 0 14px;
+    padding-left: 20px;
 }
 
-.container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 25px 35px;
+li + li {
+    margin-top: 5px;
+}
+
+a {
+    color: var(--green);
+}
+
+a:hover {
+    color: var(--amber);
+}
+
+:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 2px;
+}
+
+/* off screen until it is focused, so keyboard users can jump the menu */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: 8px;
+    top: 8px;
+    z-index: 10;
     background-color: #ffffff;
-    border: 1px solid #dddddd;
+    color: var(--green-dark);
+    padding: 10px 14px;
+    border-radius: var(--radius);
 }
 
-.tagline {
-    font-style: italic;
-    color: #666666;
-}
-
-/* ---------- float and clear helpers ---------- */
-.float-left {
-    float: left;
-    margin: 4px 20px 10px 0;
-}
+/* ------------------------------------------------------- float and clear */
 
 .float-right {
     float: right;
-    margin: 4px 0 10px 20px;
+    margin: 4px 0 12px 22px;
 }
 
-/* clear stops the next element from wrapping around a float */
+.float-left {
+    float: left;
+    margin: 4px 22px 12px 0;
+}
+
+/* stops the following block from sliding up beside a float */
 .clear {
     clear: both;
 }
 
-/* clearfix makes a box grow to hold its floated children */
+/* lets a box grow around its own floated children */
 .clearfix::after {
     content: "";
-    display: table;
+    display: block;
     clear: both;
 }
 
-.side-img {
-    width: 240px;
-    border: 3px solid #2e7d32;
+.about-photo {
+    width: 300px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
 }
 
-/* the book cover is portrait, so it gets a narrower box */
-.side-img.cover {
-    width: 150px;
+/* ------------------------------------------------------------------ cards */
+
+.card {
+    background-color: var(--green-tint);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin-bottom: 14px;
 }
 
-/* ---------- quick facts (homepage) ---------- */
-/* four boxes, two per row, floated so they sit side by side */
-.quick-facts {
-    margin: 15px 0 25px 0;
-}
-
-.fact-box {
-    float: left;
-    width: 46%;
-    margin: 0 0 20px 0;
-    padding: 12px 15px;
-    background-color: #e6f4ea;
-    border-left: 4px solid #2e7d32;
-    box-sizing: border-box;
-    min-height: 90px;
-}
-
-/* same even/odd trick as the gallery: second column floats right,
-   and every odd box clears both so a new row starts cleanly */
-.fact-box:nth-child(even) {
-    float: right;
-}
-
-.fact-box:nth-child(odd) {
-    clear: both;
-}
-
-.fact-box h3 {
-    margin-top: 0;
-}
-
-.fact-box p {
+.card p:last-child {
     margin-bottom: 0;
-    color: #555555;
 }
 
-/* ---------- pull-quote / highlight ---------- */
-.highlight {
-    margin: 20px 0;
-    padding: 14px 20px;
-    background-color: #f3f8f4;
-    border-left: 4px solid #a5d6a7;
-    font-style: italic;
-    color: #555555;
+.fact-list {
+    list-style: none;
+    padding: 0;
 }
 
-/* ---------- navigation menu ---------- */
-header {
-    background-color: #2e7d32;
+.fact-list li {
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
 }
 
-/* the nav is only as wide as its links, so auto margins centre it */
-nav {
-    width: fit-content;
-    margin: 0 auto;
+.fact-list li:last-child {
+    border-bottom: 0;
 }
 
-/* floating each link puts them side by side in one row */
-nav a {
-    float: left;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 18px 16px;
+.tag {
+    display: inline-block;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 0.82rem;
+    color: var(--muted);
 }
 
-nav a:hover {
-    background-color: #1b5e20;
-}
+/* ----------------------------------------------------------------- tables */
 
-nav a.active {
-    background-color: #1b5e20;
-    border-bottom: 3px solid #a5d6a7;
-    padding-bottom: 15px;
-}
-
-/* ---------- hobbies page ---------- */
-.hobby {
-    margin-bottom: 22px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid #eeeeee;
-}
-
-.hobby:last-child {
-    border-bottom: none;
-}
-
-/* ---------- skills page ---------- */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 30px;
+    margin-bottom: 8px;
 }
 
-th, td {
+caption {
     text-align: left;
-    padding: 8px 10px;
-    border-bottom: 1px solid #dddddd;
+    color: var(--muted);
+    font-size: 0.88rem;
+    padding-bottom: 8px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
 }
 
 th {
-    background-color: #e6f4ea;
-    color: #2e7d32;
+    background-color: var(--green-tint);
+    color: var(--green-dark);
+    font-weight: 600;
 }
 
-/* ---------- image gallery ---------- */
+tbody tr:hover {
+    background-color: #f7faf8;
+}
+
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+/* ---------------------------------------------------------------- gallery */
+
+/* two pictures per row, both floated left */
 .gallery figure {
     float: left;
-    width: 48%;
-    margin: 0 0 20px 0;
+    width: calc(50% - 9px);
+    margin: 0 0 18px 0;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
 }
 
-/* every second picture floats right, so the two columns line up */
+/* the second picture in each row loses its gap so the edge stays flush */
 .gallery figure:nth-child(even) {
+    margin-right: 0;
     float: right;
 }
 
-/* each odd picture starts a new row below the tallest one above it */
+/* every odd picture starts below the tallest one above it */
 .gallery figure:nth-child(odd) {
     clear: both;
 }
 
 .gallery img {
-    width: 100%;
-    height: auto;
-    border: 3px solid #2e7d32;
     display: block;
-    box-sizing: border-box;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* the Substack mark is a small logo, so it is shown at its own size
+   instead of being stretched across the tile */
+.gallery img.logo {
+    width: 155px;
+    height: 148px;
+    margin: 26px auto;
+    object-fit: contain;
 }
 
 .gallery figcaption {
-    text-align: center;
-    margin-top: 6px;
-    color: #666666;
-    font-size: 14px;
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: var(--muted);
 }
 
-/* ---------- contact page ---------- */
-.contact-list {
-    line-height: 1.9;
-    margin-bottom: 25px;
+.gallery figcaption strong {
+    display: block;
+    color: var(--ink);
+    font-weight: 600;
 }
 
-.contact-list a {
-    color: #2e7d32;
+/* ----------------------------------------------------------------- forms */
+
+.contact-form {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px;
+    max-width: 520px;
 }
 
-/* ---------- footer ---------- */
-footer {
+.contact-form label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 16px 0 6px;
+}
+
+.contact-form label:first-of-type {
+    margin-top: 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 9px 11px;
+    border: 1px solid #c3cec6;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--ink);
+    background-color: #ffffff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid var(--green);
+    outline-offset: 1px;
+    border-color: var(--green);
+}
+
+.contact-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid var(--green);
+    border-radius: 6px;
+    background-color: var(--green);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.12s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--green-dark);
+    border-color: var(--green-dark);
+}
+
+.form-note {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 10px 0 0;
+}
+
+/* the cards live in their own wrapper so :nth-child counts only the cards */
+.contact-grid {
+    float: left;
+    width: calc(50% - 9px);
+    margin: 0 9px 14px 0;
+}
+
+.contact-list .contact-grid:nth-child(2n) {
+    margin-right: 0;
+}
+
+.contact-list::after {
+    content: "";
+    display: block;
     clear: both;
-    text-align: center;
-    color: #666666;
-    font-size: 14px;
-    padding-bottom: 30px;
+}
+
+.contact-grid .card {
+    margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------------- footer */
+
+.site-footer {
+    background-color: var(--green-dark);
+    color: #cfe3d2;
+    clear: both;
+}
+
+.site-footer .bar {
+    padding: 20px;
+    font-size: 0.88rem;
+}
+
+.site-footer p {
+    margin: 0 0 4px;
+}
+
+.site-footer a {
+    color: #ffffff;
+}
+
+/* ------------------------------------------------------------ small screen */
+
+@media (max-width: 760px) {
+    .brand,
+    .site-nav,
+    .site-nav a {
+        float: none;
+    }
+
+    .site-nav a {
+        display: inline-block;
+        padding: 12px 10px;
+    }
+
+    .sheet {
+        padding: 22px 18px;
+    }
+
+    .float-right,
+    .float-left,
+    .gallery figure,
+    .contact-grid {
+        float: none;
+        width: 100%;
+        margin: 0 0 16px 0;
+    }
+
+    .about-photo {
+        width: 100%;
+    }
 }

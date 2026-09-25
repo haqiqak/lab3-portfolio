@@ -1,52 +1,88 @@
 <!DOCTYPE html>
+<!-- Haqiq Azeem Khan | Student ID 519071 | Section BSDS2A | CS313 Web Engineering Lab 3 -->
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Haqiq Azeem Khan - Home</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haqiq Azeem Khan | Portfolio</title>
+    <meta name="description" content="Personal portfolio of Haqiq Azeem Khan, BS Data Science student at NUST.">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-    <nav class="clearfix">
-        <a href="index.html" class="active">Home</a>
-        <a href="hobbies.html">Hobbies</a>
-        <a href="skills.html">Personal Skills</a>
-        <a href="gallery.html">Image Gallery</a>
-        <a href="contact.html">Contact Me</a>
-    </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+    <div class="bar clearfix">
+        <p class="brand">Haqiq Azeem Khan<small>BS Data Science, NUST Islamabad</small></p>
+        <nav class="site-nav" aria-label="Main">
+            <a class="active" href="index.html">Home</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="skills.html">Skills</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<div class="container">
-    <h1>Haqiq Azeem Khan</h1>
-    <p class="tagline">BS Data Science student at NUST, Islamabad.</p>
+<div class="wrap">
+    <div class="sheet">
 
-    <h2>About Me</h2>
-    <img class="float-right side-img" src="images/photo3.jpg"
-         alt="A NUST campus building">
-    <p>
-        I'm currently studying for a BS in Data Science at the National University of Sciences and
-        Technology (NUST) in Islamabad. Before NUST I went to Cadet College Hasan Abdal, where I was an
-        academic position holder and completed my Duke of Edinburgh's Award, including its community
-        service section.
-    </p>
+        <h1 class="page-title">Portfolio</h1>
+        <p class="lede">A short introduction to me, plus what I have been getting up to outside coursework.</p>
 
-    <div class="clear"></div>
+        <main id="main">
+        <section>
+            <h2>About me</h2>
+            <img class="float-right about-photo" src="images/photo1.jpg"
+                 alt="A wide view of the NUST campus in Islamabad">
+            <p>
+                I am Haqiq Azeem Khan, a Data Science undergraduate at the National University of
+                Sciences and Technology in Islamabad. I grew up in Wah Cantt and did my schooling at
+                Cadet College Hasan Abdal, where I held an academic position and finished the Duke of
+                Edinburgh's Award, including the community service section.
+            </p>
+            <p>
+                Most of what I do sits somewhere between writing and building things. I write short
+                fiction in Urdu and English, and I am slowly getting into Unreal Engine so I can make
+                the games I keep describing but never finish.
+            </p>
+            <div class="clear"></div>
+        </section>
 
-    <h2>A Quick Summary</h2>
-    <ul>
-        <li>Studying BS Data Science at NUST since 2024</li>
-        <li>Originally from Wah Cantt</li>
-        <li>Built a small game in Unreal Engine for a university course</li>
-        <li>Play field hockey and football in my spare time</li>
-    </ul>
+        <section>
+            <h2>A few things about me</h2>
+            <ul class="fact-list">
+                <li>Studying BS Data Science at NUST since 2024</li>
+                <li>Originally from Wah Cantt, Punjab</li>
+                <li>Writing short fiction since 2019, mostly in Urdu at first</li>
+                <li>Script writer for the NUST Drama Club</li>
+                <li>Play field hockey and football when the weather allows</li>
+            </ul>
+            <p><span class="tag">Data Science</span> <span class="tag">Writing</span>
+               <span class="tag">Field Hockey</span> <span class="tag">Game Development</span></p>
+        </section>
 
-    <p>Use the navigation bar above to look through my hobbies, skills, a small image gallery and my
-    contact details.</p>
+        <section>
+            <h2>Where to go next</h2>
+            <ul>
+                <li><a href="hobbies.html">Hobbies</a>: what I do away from coursework</li>
+                <li><a href="skills.html">Skills</a>: languages, tools and spoken languages</li>
+                <li><a href="gallery.html">Gallery</a>: six pictures from places I have been</li>
+                <li><a href="contact.html">Contact</a>: how to reach me</li>
+            </ul>
+        </section>
+        </main>
+
+    </div>
 </div>
 
-<footer>
-    <p>Haqiq Azeem Khan - CS313 Web Engineering, Lab 3</p>
+<footer class="site-footer">
+    <div class="bar">
+        <p>Haqiq Azeem Khan &middot; Student ID 519071 &middot; Section BSDS2A</p>
+        <p>CS313 Web Engineering, Lab 3 &middot;
+           <a href="https://github.com/haqiqak">github.com/haqiqak</a></p>
+    </div>
 </footer>
 
 </body>

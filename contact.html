@@ -1,34 +1,104 @@
 <!DOCTYPE html>
+<!-- Haqiq Azeem Khan | Student ID 519071 | Section BSDS2A | CS313 Web Engineering Lab 3 -->
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Haqiq Azeem Khan - Contact Me</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Haqiq Azeem Khan</title>
+    <meta name="description" content="How to reach Haqiq Azeem Khan.">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-    <nav class="clearfix">
-        <a href="index.html">Home</a>
-        <a href="hobbies.html">Hobbies</a>
-        <a href="skills.html">Personal Skills</a>
-        <a href="gallery.html">Image Gallery</a>
-        <a href="contact.html" class="active">Contact Me</a>
-    </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+    <div class="bar clearfix">
+        <p class="brand">Haqiq Azeem Khan<small>BS Data Science, NUST Islamabad</small></p>
+        <nav class="site-nav" aria-label="Main">
+            <a href="index.html">Home</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="skills.html">Skills</a>
+            <a href="gallery.html">Gallery</a>
+            <a class="active" href="contact.html">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<div class="container">
-    <h1>Contact Me</h1>
+<div class="wrap">
+    <div class="sheet">
 
-    <div class="contact-list">
-        <strong>Email:</strong> <a href="mailto:haqiqazeem8@gmail.com">haqiqazeem8@gmail.com</a><br>
-        <strong>GitHub:</strong> <a href="https://github.com/haqiqak" target="_blank">github.com/haqiqak</a><br>
-        <strong>Substack:</strong> <a href="https://haqiq.substack.com" target="_blank">haqiq.substack.com</a>
+        <h1 class="page-title">Contact</h1>
+        <p class="lede">Email is the quickest way to reach me. I usually reply within a day or two.</p>
+
+        <main id="main">
+        <section>
+            <h2>Where to find me</h2>
+
+            <div class="contact-list">
+                <div class="contact-grid">
+                    <div class="card">
+                        <h3>Email</h3>
+                        <p><a href="mailto:haqiqazeem8@gmail.com">haqiqazeem8@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="card">
+                        <h3>GitHub</h3>
+                        <p><a href="https://github.com/haqiqak">github.com/haqiqak</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="card">
+                        <h3>Writing</h3>
+                        <p><a href="https://haqiq.substack.com">haqiq.substack.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="card">
+                        <h3>Based in</h3>
+                        <p>Islamabad, Pakistan</p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Send a message</h2>
+            <form class="contact-form" action="mailto:haqiqazeem8@gmail.com" method="post"
+                  enctype="text/plain">
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" placeholder="What should I call you?" required>
+
+                <label for="email">Your email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6"
+                          placeholder="What is this about?" required></textarea>
+
+                <button type="submit">Send message</button>
+                <p class="form-note">
+                    This page has no JavaScript, so the form hands the message to your email client
+                    instead of sending it to a server.
+                </p>
+            </form>
+        </section>
+        </main>
+
     </div>
 </div>
 
-<footer>
-    <p>Haqiq Azeem Khan - CS313 Web Engineering, Lab 3</p>
+<footer class="site-footer">
+    <div class="bar">
+        <p>Haqiq Azeem Khan &middot; Student ID 519071 &middot; Section BSDS2A</p>
+        <p>CS313 Web Engineering, Lab 3 &middot;
+           <a href="https://github.com/haqiqak">github.com/haqiqak</a></p>
+    </div>
 </footer>
 
 </body>

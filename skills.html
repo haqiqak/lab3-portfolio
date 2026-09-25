@@ -1,76 +1,134 @@
 <!DOCTYPE html>
+<!-- Haqiq Azeem Khan | Student ID 519071 | Section BSDS2A | CS313 Web Engineering Lab 3 -->
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Haqiq Azeem Khan - Personal Skills</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Skills | Haqiq Azeem Khan</title>
+    <meta name="description" content="Programming, spoken languages and other skills.">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-    <nav class="clearfix">
-        <a href="index.html">Home</a>
-        <a href="hobbies.html">Hobbies</a>
-        <a href="skills.html" class="active">Personal Skills</a>
-        <a href="gallery.html">Image Gallery</a>
-        <a href="contact.html">Contact Me</a>
-    </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+    <div class="bar clearfix">
+        <p class="brand">Haqiq Azeem Khan<small>BS Data Science, NUST Islamabad</small></p>
+        <nav class="site-nav" aria-label="Main">
+            <a href="index.html">Home</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a class="active" href="skills.html">Skills</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<div class="container">
-    <h1>Personal Skills</h1>
+<div class="wrap">
+    <div class="sheet">
 
-    <h2>Programming</h2>
-    <table>
-        <tr>
-            <th>Language / Tool</th>
-            <th>Level</th>
-        </tr>
-        <tr>
-            <td>Python</td>
-            <td>Intermediate</td>
-        </tr>
-        <tr>
-            <td>HTML / CSS</td>
-            <td>Beginner to intermediate</td>
-        </tr>
-        <tr>
-            <td>C++ (Unreal Engine Blueprints/scripting)</td>
-            <td>Beginner</td>
-        </tr>
-        <tr>
-            <td>SQL</td>
-            <td>Beginner</td>
-        </tr>
-    </table>
+        <h1 class="page-title">Personal Skills</h1>
+        <p class="lede">What I can actually do, as honestly as I can put it.</p>
 
-    <h2>Spoken Languages</h2>
-    <table>
-        <tr>
-            <th>Language</th>
-            <th>Level</th>
-        </tr>
-        <tr>
-            <td>Urdu</td>
-            <td>Native</td>
-        </tr>
-        <tr>
-            <td>English</td>
-            <td>Fluent</td>
-        </tr>
-    </table>
+        <main id="main">
+        <section>
+            <h2>Programming and tools</h2>
+            <table>
+                <caption>Self-assessed, so take the levels with a pinch of salt.</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Language or tool</th>
+                        <th scope="col">Level</th>
+                        <th scope="col">Where I have used it</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Python</td>
+                        <td>Intermediate</td>
+                        <td>Coursework and data cleaning scripts</td>
+                    </tr>
+                    <tr>
+                        <td>SQL</td>
+                        <td>Beginner</td>
+                        <td>Database assignments</td>
+                    </tr>
+                    <tr>
+                        <td>HTML and CSS</td>
+                        <td>Intermediate</td>
+                        <td>This portfolio, among other things</td>
+                    </tr>
+                    <tr>
+                        <td>C++</td>
+                        <td>Beginner</td>
+                        <td>Unreal Engine scripting for a course project</td>
+                    </tr>
+                    <tr>
+                        <td>Unreal Engine</td>
+                        <td>Beginner</td>
+                        <td>One small game, built badly</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-    <h2>Other Skills</h2>
-    <ul>
-        <li>Creative writing in Urdu and English (short fiction)</li>
-        <li>Script writing, from my time with the NUST Drama Club</li>
-        <li>Basic game development in Unreal Engine</li>
-        <li>Data analysis / data science fundamentals from coursework</li>
-    </ul>
+        <section>
+            <h2>Spoken languages</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Language</th>
+                        <th scope="col">Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Urdu</td>
+                        <td>Native</td>
+                    </tr>
+                    <tr>
+                        <td>English</td>
+                        <td>Fluent, written and spoken</td>
+                    </tr>
+                    <tr>
+                        <td>Punjabi</td>
+                        <td>Conversational, and improving</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Other skills</h2>
+            <ul>
+                <li>Short fiction writing in Urdu and English, mostly published on my Substack</li>
+                <li>Script writing for stage, from my time with the NUST Drama Club</li>
+                <li>Debating and public speaking, from school assemblies and college events</li>
+                <li>Basic level design in Unreal Engine: blockouts, lighting and simple Blueprints</li>
+                <li>Data analysis fundamentals from coursework, mostly spreadsheets and Python</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Still learning</h2>
+            <p>
+                C++ properly, rather than the parts Unreal hands you. Calculus and linear algebra
+                beyond what the course covers. And enough game design theory to stop building things I
+                cannot finish.
+            </p>
+        </section>
+        </main>
+
+    </div>
 </div>
 
-<footer>
-    <p>Haqiq Azeem Khan - CS313 Web Engineering, Lab 3</p>
+<footer class="site-footer">
+    <div class="bar">
+        <p>Haqiq Azeem Khan &middot; Student ID 519071 &middot; Section BSDS2A</p>
+        <p>CS313 Web Engineering, Lab 3 &middot;
+           <a href="https://github.com/haqiqak">github.com/haqiqak</a></p>
+    </div>
 </footer>
 
 </body>
